@@ -1,0 +1,13 @@
+name: Auto Commit
+on:
+  schedule:
+    - cron: '0 0 * * *' # Daily at midnight
+jobs:
+  commit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - run: echo "Auto commit $(date)" >> README.md
+      - uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: "Auto commit"
