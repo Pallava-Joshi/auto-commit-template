@@ -10,4 +10,4 @@ jobs:
       - run: echo "Auto commit $(date)" >> README.md
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
-          commit_message: "Auto commit"
+          commit_message: "Auto committer update"
