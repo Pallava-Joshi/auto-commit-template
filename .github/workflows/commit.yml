@@ -4,6 +4,10 @@ on:
   schedule:
     - cron: '0 0 * * *' # Runs daily at midnight UTC
 
+# Add permissions to allow write access
+permissions:
+  contents: write
+
 jobs:
   commit:
     runs-on: ubuntu-latest
